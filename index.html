@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Makes the website responsive by scaling properly on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive CSS Layout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ================= HEADER SECTION ================= -->
+  <header class="header">
+    <!-- Logo / Brand name -->
+    <h1 class="logo">MyWebsite</h1>
+
+    <!-- Navigation menu using Flexbox -->
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN CONTENT AREA ================= -->
+  <!-- CSS Grid is used here for sidebar + content layout -->
+  <main class="main-grid">
+    <!-- Sidebar section -->
+    <aside class="sidebar">
+      <h2>Sidebar</h2>
+      <p>Some links or extra info here.</p>
+    </aside>
+
+    <!-- Main content area -->
+    <section class="content">
+      <h2>Main Content</h2>
+      <p>This is the main content section. Resize the screen to see how the layout adapts.</p>
+
+      <!-- Card container using Flexbox -->
+      <div class="card-container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <p>© 2025 MyWebsite | Designed with CSS Grid & Flexbox</p>
+  </footer>
+</body>
+</html>

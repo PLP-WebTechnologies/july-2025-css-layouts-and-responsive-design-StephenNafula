@@ -1,0 +1,109 @@
+/* ========== RESET STYLES ========== */
+/* Removes default margin/padding from all elements and ensures box-sizing is consistent */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ========== HEADER (Flexbox for nav alignment) ========== */
+.header {
+  display: flex;                  /* Enables Flexbox */
+  justify-content: space-between; /* Places logo left, nav right */
+  align-items: center;            /* Vertically centers items */
+  background: #004466;            /* Dark blue background */
+  color: white;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav ul {
+  list-style: none;   /* Removes bullets from list */
+  display: flex;      /* Displays menu horizontally */
+  gap: 1rem;          /* Adds spacing between nav items */
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ========== MAIN LAYOUT (Grid) ========== */
+.main-grid {
+  display: grid;                        /* Enables CSS Grid */
+  grid-template-columns: 250px 1fr;     /* Sidebar (250px) + Content (rest of space) */
+  gap: 1rem;                            /* Spacing between sidebar and content */
+  padding: 1rem;
+}
+
+.sidebar {
+  background: #e0f0f7;                  /* Light blue background */
+  padding: 1rem;
+  border-radius: 5px;                   /* Slightly rounded corners */
+}
+
+.content {
+  background: #f8f8f8;                  /* Light gray background */
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* ========== FLEXBOX CARDS ========== */
+.card-container {
+  display: flex;           /* Enables Flexbox */
+  gap: 1rem;               /* Space between cards */
+  margin-top: 1rem;
+  flex-wrap: wrap;         /* Allows cards to wrap to the next row on small screens */
+}
+
+.card {
+  flex: 1 1 200px;          /* Grows and shrinks with a min width of 200px */
+  background: #dbeafe;      /* Light blue */
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background: #004466;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* ========== MEDIA QUERIES FOR RESPONSIVENESS ========== */
+
+/* Tablet View (screen width 900px or smaller) */
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+  .sidebar {
+    order: -1; /* Moves sidebar above content */
+  }
+}
+
+/* Mobile View (screen width 600px or smaller) */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;     /* Stacks logo and nav vertically */
+    align-items: flex-start;    /* Aligns items to the left */
+  }
+
+  .nav ul {
+    flex-direction: column;     /* Menu becomes vertical */
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
